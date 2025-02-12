@@ -1,54 +1,3 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="es"> -->
-<!-- <head> -->
-<!--   <meta charset="UTF-8"> -->
-<!--   <title>Imagen Aleatoria del Día</title> -->
-<!--   <style> -->
-<!--     body { -->
-<!--       font-family: sans-serif; -->
-<!--       text-align: center; -->
-<!--       margin-top: 50px; -->
-<!--     } -->
-<!--     img { -->
-<!--       max-width: 80%; -->
-<!--       height: auto; -->
-<!--       border: 2px solid #ccc; -->
-<!--       box-shadow: 2px 2px 5px rgba(0,0,0,0.3); -->
-<!--     } -->
-<!--   </style> -->
-<!-- </head> -->
-<!-- <body> -->
-<!--   <h1>Imagen Aleatoria del Día</h1> -->
-<!--   <!-- La imagen se cargará aquí --> -->
-<!--   <img id="imagenDiaria" src="" alt="Imagen del día"> -->
-<!---->
-<!--   <script> -->
-<!--     // Define el arreglo de imágenes (ajusta las rutas según tu estructura) -->
-<!--     const imagenes = [ -->
-<!--       "imagenes/bkg.png", -->
-<!--       "imagenes/bullet.png", -->
-<!--     ]; -->
-<!---->
-<!--     // Para cambiar la imagen cada día de forma "determinística", -->
-<!--     // podemos usar la fecha actual como semilla. -->
-<!--     const hoy = new Date(); -->
-<!--     // Convierte la fecha a un número (por ejemplo, YYYYMMDD) -->
-<!--     const anio = hoy.getFullYear(); -->
-<!--     // Nota: getMonth() devuelve de 0 a 11, por ello se suma 1 -->
-<!--     const mes = hoy.getMonth() + 1; -->
-<!--     const dia = hoy.getDate(); -->
-<!--     // Genera un número único para el día (por ejemplo, 20250209 para 9 de febrero de 2025) -->
-<!--     const fechaNumerica = parseInt(`${anio}${mes < 10 ? '0' + mes : mes}${dia < 10 ? '0' + dia : dia}`, 10); -->
-<!--     // Selecciona un índice usando módulo, para que el resultado siempre esté en el rango del arreglo. -->
-<!--     const indice = fechaNumerica % imagenes.length; -->
-<!---->
-<!--     // Actualiza el atributo src de la imagen -->
-<!--     document.getElementById("imagenDiaria").src = imagenes[indice]; -->
-<!--   </script> -->
-<!-- </body> -->
-<!-- </html> -->
-<!---->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,7 +8,7 @@
 <body>
     <h1>Imagen Aleatoria del Día</h1>
     <!-- La imagen se cargará aquí -->
-    <img id="imagenDiaria" src="" alt="Imagen del día">
+    <img id="imagenDiaria" src="" width="300" height="300" alt="Imagen del día">
 
     <script>
         // Función para cargar el JSON con la lista de imágenes
