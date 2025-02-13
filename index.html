@@ -3,12 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagen Aleatoria del Día</title>
+    <title>Regalo de San Valentín</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #imagenDiaria {
+            width: 80%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        #imagenDiaria:hover {
+            transform: scale(1.05);
+        }
+
+        .mensaje {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #e91e63;
+            border-radius: 10px;
+            background-color: #fce4ec;
+            font-size: 1.2rem;
+            color: #e91e63;
+            font-style: italic;
+        }
+
+        .mensaje p {
+            margin: 0;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Imagen Aleatoria del Día</h1>
-    <!-- La imagen se cargará aquí -->
-    <img id="imagenDiaria" src="" width="60%" alt="Imagen del día">
+    <div class="container">
+        <h1>¡Feliz San Valentín, mi amor!</h1>
+        <!-- La imagen se cargará aquí -->
+        <img id="imagenDiaria" src="" alt="Imagen del día">
+        
+        <div class="mensaje">
+            <p>Querido/a [nombre de tu pareja],</p>
+            <p>Aquí va tu mensaje de San Valentín. ¡Te amo mucho!</p>
+            <!-- Aquí puedes agregar el texto personalizado como una carta -->
+        </div>
+    </div>
 
     <script>
         // Función para cargar el JSON con la lista de imágenes
@@ -33,7 +97,7 @@
         async function main() {
             const imagenes = await cargarImagenes();
             const imagenSeleccionada = seleccionarImagen(imagenes);
-            //document.getElementById("imagenDiaria").src = ;//imagenSeleccionada;
+            document.getElementById("imagenDiaria").src = imagenSeleccionada;
         }
 
         // Llama a la función principal cuando se carga la página
@@ -41,3 +105,4 @@
     </script>
 </body>
 </html>
+
